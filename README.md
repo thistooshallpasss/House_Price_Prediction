@@ -87,3 +87,117 @@ Hum safaltapoorvak ek poora machine learning project banane mein kaamyaab rahe, 
 - **Backend Framework**: Abhi humne model ka logic JavaScript mein daala hai. Ek behtar approach Python backend framework jaise Flask ya Django ka use karna hai, jahan hum trained model file (.pkl ya .joblib) ko load karke real-time predictions de sakte hain.  
 - **Deployment**: Is poori web application ko cloud platforms jaise Heroku, AWS, ya Google Cloud par deploy kiya ja sakta hai taaki koi bhi ise internet par use kar sake.  
 - **Aur Features Shamil Karna**: Model ko aur behtar banane ke liye hum 'age of property', 'proximity to metro station', 'floor number' jaise naye features shamil kar sakte hain.  
+----
+```markdown
+
+## Tech Stack and Libraries Used
+
+### Language:
+- Python
+
+### Libraries:
+- **Pandas** (Data Manipulation)
+- **Scikit-learn** (Model Training)
+
+### Frontend:
+- **HTML**
+- **Tailwind CSS**
+- **JavaScript**
+
+### Notebook:
+- **Jupyter Notebook**
+
+## Project Structure
+
+To keep the project organized, the following file structure has been used:
+
+```txt
+
+Bangalore\_House\_Price\_Prediction/
+│
+├── data/
+│   ├── Bengaluru\_House\_Data.csv           (Raw Data)
+│   └── cleaned\_bengaluru\_house\_data.csv  (Cleaned Data)
+│
+├── scripts/
+│   ├── data\_cleaning.py                  (Data Cleaning Script)
+│   └── model\_training.py                 (Model Training Script)
+│
+├── notebooks/
+│   └── main.ipynb                        (Model Training and Analysis Notebook)
+│
+├── webapp/
+│   └── index.html                        (Web App for Prediction)
+│
+└── requirements.txt                      (Required Python Libraries)
+
+```
+
+## How to Run the Project (Step-by-Step)
+
+Follow these steps to run the project on your local machine:
+
+### Step 1: Project Setup
+
+1. **Clone the repository** (if available on GitHub) or download the project folder.
+   
+2. Open the terminal and navigate to the root directory of the project:
+
+   ```bash
+   cd Bangalore_House_Price_Prediction
+   ```
+
+3. **Install the required libraries**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Step 2: Clean the Data
+
+1. First, clean the raw data by running the data cleaning script:
+
+   ```bash
+   python scripts/data_cleaning.py
+   ```
+
+2. This script will generate a new file, `cleaned_bengaluru_house_data.csv`, inside the `data/` folder.
+
+### Step 3: Train the Machine Learning Model
+
+1. Now, train the model on the cleaned data by running the model training script:
+
+   ```bash
+   python scripts/model_training.py
+   ```
+
+2. The script will print the **Intercept** and **Coefficients** of all the features in the terminal. Copy these values for the next step.
+
+### Step 4: Update the Web App
+
+1. Open the `webapp/index.html` file in a text editor.
+
+2. Inside the `<script>` section, you will find a JavaScript object named `modelParams`.
+
+3. Paste the **Intercept** and **Coefficients** values you copied from Step 3 into the `modelParams` object.
+
+### Step 5: Run the Web App
+
+1. Double-click on the `webapp/index.html` file to open it in your web browser.
+
+2. Now, you can enter the details of a house to get the predicted price!
+
+## Screenshots
+
+### Main Web Application Page
+
+This is the main interface of the web app where users can enter house details.
+
+![Web App Main Page](data/main.png)
+
+### Price Prediction Result
+
+After entering the details, the model will display the estimated price for the house.
+
+![Price Prediction Result](data/price.png)
+
