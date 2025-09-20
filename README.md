@@ -88,7 +88,6 @@ Hum safaltapoorvak ek poora machine learning project banane mein kaamyaab rahe, 
 - **Deployment**: Is poori web application ko cloud platforms jaise Heroku, AWS, ya Google Cloud par deploy kiya ja sakta hai taaki koi bhi ise internet par use kar sake.  
 - **Aur Features Shamil Karna**: Model ko aur behtar banane ke liye hum 'age of property', 'proximity to metro station', 'floor number' jaise naye features shamil kar sakte hain.  
 ----
-```markdown
 
 ## Tech Stack and Libraries Used
 
